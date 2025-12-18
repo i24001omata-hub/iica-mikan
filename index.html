@@ -2,24 +2,25 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>アンケート分析AIツール</title>
 
     <!-- PWA -->
-    <meta name="theme-color" content="#f2dfbb" />
     <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#f2dfbb" />
+    <meta name="application-name" content="アンケート分析AIツール" />
 
-    <!-- Android (Chrome) -->
+    <!-- Android / Chrome -->
     <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/png" sizes="192x192" href="Icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="Icon-512.png" />
 
     <!-- iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="分析ツール" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="apple-touch-icon" href="Icon-192.png" />
-
-    <!-- Optional: favicon -->
-    <link rel="icon" href="Icon-192.png" />
 
     <style>
       html,
@@ -27,6 +28,7 @@
         margin: 0;
         height: 100%;
         overflow: hidden;
+        background: #f2dfbb;
       }
 
       iframe {
@@ -37,23 +39,12 @@
       }
     </style>
   </head>
+
   <body>
     <iframe
-      src="https://script.google.com/macros/s/AKfycbzaCsTp6twgISNb4jq8mqFywtJ3cFyF9HrPQ0LcYwXV5y4sqVCpbWg4VSvxlLcPp9affw/exec"
+      src="https://script.google.com/macros/s/AKfycbxPWzXF1vHZd17j7vyYx0tvZKXwhZgb2_v7HCLRWeSM5pSfKwBleTV6EbVqW5z837CFVA/exec"
       title="アンケート分析AIツール"
       allow="clipboard-read; clipboard-write"
     ></iframe>
-
-    <script>
-      // NOTE: PWAとして「インストール可能」にするには Service Worker が必要です。
-      // sw.js を用意した場合だけ有効化してください。
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js").catch(() => {
-            // sw.js が未配置の場合、ここで失敗します（動作自体には影響しません）
-          });
-        });
-      }
-    </script>
   </body>
 </html>
