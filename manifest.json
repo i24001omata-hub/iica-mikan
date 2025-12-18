@@ -1,6 +1,7 @@
 {
   "name": "アンケート分析AIツール",
   "short_name": "分析ツール",
+  "id": "/iica-mikan/",
   "start_url": "https://i24001omata-hub.github.io/iica-mikan/",
   "scope": "https://i24001omata-hub.github.io/iica-mikan/",
   "display": "standalone",
