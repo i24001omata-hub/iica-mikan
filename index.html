@@ -1,26 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>アンケート分析AIツール</title>
 
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json" />
+    <!-- PWA: Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Theme colors -->
     <meta name="theme-color" content="#f2dfbb" />
-    <meta name="application-name" content="アンケート分析AIツール" />
+    <meta name="msapplication-TileColor" content="#f2dfbb" />
 
-    <!-- Android / Chrome -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="icon" type="image/png" sizes="192x192" href="Icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="Icon-512.png" />
-
-    <!-- iOS -->
+    <!-- iOS PWA meta -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="分析ツール" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="apple-touch-icon" href="Icon-192.png" />
+    <meta name="apple-mobile-web-app-title" content="分析ツール" />
+
+    <!-- iOS icons (place these at the same level) -->
+    <link rel="apple-touch-icon" href="./image192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./Icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./Icon-512.png" />
+
+    <!-- Basic security / embedding hints -->
+    <meta name="referrer" content="no-referrer-when-downgrade" />
 
     <style>
       html,
@@ -46,6 +50,12 @@
       title="アンケート分析AIツール"
       allow="clipboard-read; clipboard-write"
     ></iframe>
+
+    <!-- Optional: minimal SW registration (safe to keep even if you don't add sw.js yet) -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      }
+    </script>
   </body>
 </html>
-
