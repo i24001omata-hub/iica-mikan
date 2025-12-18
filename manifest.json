@@ -1,0 +1,22 @@
+{
+  "name": "アンケート分析AIツール",
+  "short_name": "分析ツール",
+  "start_url": "https://i24001omata-hub.github.io/iica-mikan/",
+  "scope": "https://i24001omata-hub.github.io/iica-mikan/",
+  "display": "standalone",
+  "theme_color": "#f2dfbb",
+  "background_color": "#f2dfbb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
